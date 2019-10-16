@@ -1,0 +1,313 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateOrder {
+  onCreateOrder {
+    id
+    status
+    dateOrderPlaced
+    orderDetails
+    items {
+      items {
+        id
+        quantity
+        price
+        otherItemDetails
+        order {
+          id
+          status
+          dateOrderPlaced
+          orderDetails
+        }
+        product {
+          id
+          name
+          price
+          stock
+          size
+          description
+        }
+      }
+      nextToken
+    }
+  }
+}
+subscription OnUpdateOrder {
+  onUpdateOrder {
+    id
+    status
+    dateOrderPlaced
+    orderDetails
+    items {
+      items {
+        id
+        quantity
+        price
+        otherItemDetails
+        order {
+          id
+          status
+          dateOrderPlaced
+          orderDetails
+        }
+        product {
+          id
+          name
+          price
+          stock
+          size
+          description
+        }
+      }
+      nextToken
+    }
+  }
+}
+subscription OnDeleteOrder {
+  onDeleteOrder {
+    id
+    status
+    dateOrderPlaced
+    orderDetails
+    items {
+      items {
+        id
+        quantity
+        price
+        otherItemDetails
+        order {
+          id
+          status
+          dateOrderPlaced
+          orderDetails
+        }
+        product {
+          id
+          name
+          price
+          stock
+          size
+          description
+        }
+      }
+      nextToken
+    }
+  }
+}
+subscription OnCreateOrderItem {
+  onCreateOrderItem {
+    id
+    quantity
+    price
+    otherItemDetails
+    order {
+      id
+      status
+      dateOrderPlaced
+      orderDetails
+      items {
+        items {
+          id
+          quantity
+          price
+          otherItemDetails
+        }
+        nextToken
+      }
+    }
+    product {
+      id
+      name
+      price
+      stock
+      size
+      description
+      orderItems {
+        items {
+          id
+          quantity
+          price
+          otherItemDetails
+        }
+        nextToken
+      }
+    }
+  }
+}
+subscription OnUpdateOrderItem {
+  onUpdateOrderItem {
+    id
+    quantity
+    price
+    otherItemDetails
+    order {
+      id
+      status
+      dateOrderPlaced
+      orderDetails
+      items {
+        items {
+          id
+          quantity
+          price
+          otherItemDetails
+        }
+        nextToken
+      }
+    }
+    product {
+      id
+      name
+      price
+      stock
+      size
+      description
+      orderItems {
+        items {
+          id
+          quantity
+          price
+          otherItemDetails
+        }
+        nextToken
+      }
+    }
+  }
+}
+subscription OnDeleteOrderItem {
+  onDeleteOrderItem {
+    id
+    quantity
+    price
+    otherItemDetails
+    order {
+      id
+      status
+      dateOrderPlaced
+      orderDetails
+      items {
+        items {
+          id
+          quantity
+          price
+          otherItemDetails
+        }
+        nextToken
+      }
+    }
+    product {
+      id
+      name
+      price
+      stock
+      size
+      description
+      orderItems {
+        items {
+          id
+          quantity
+          price
+          otherItemDetails
+        }
+        nextToken
+      }
+    }
+  }
+}
+subscription OnCreateProduct {
+  onCreateProduct {
+    id
+    name
+    price
+    stock
+    size
+    description
+    orderItems {
+      items {
+        id
+        quantity
+        price
+        otherItemDetails
+        order {
+          id
+          status
+          dateOrderPlaced
+          orderDetails
+        }
+        product {
+          id
+          name
+          price
+          stock
+          size
+          description
+        }
+      }
+      nextToken
+    }
+  }
+}
+subscription OnUpdateProduct {
+  onUpdateProduct {
+    id
+    name
+    price
+    stock
+    size
+    description
+    orderItems {
+      items {
+        id
+        quantity
+        price
+        otherItemDetails
+        order {
+          id
+          status
+          dateOrderPlaced
+          orderDetails
+        }
+        product {
+          id
+          name
+          price
+          stock
+          size
+          description
+        }
+      }
+      nextToken
+    }
+  }
+}
+subscription OnDeleteProduct {
+  onDeleteProduct {
+    id
+    name
+    price
+    stock
+    size
+    description
+    orderItems {
+      items {
+        id
+        quantity
+        price
+        otherItemDetails
+        order {
+          id
+          status
+          dateOrderPlaced
+          orderDetails
+        }
+        product {
+          id
+          name
+          price
+          stock
+          size
+          description
+        }
+      }
+      nextToken
+    }
+  }
+}

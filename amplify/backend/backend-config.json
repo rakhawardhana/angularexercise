@@ -1,0 +1,27 @@
+{
+	"auth": {
+		"latihanangularjsad7bb12d": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	
+	"api": {
+		"latihanangular": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authlatihanangularjsad7bb12d"
+						}
+					}
+				}
+			}
+		}
+	}
+}

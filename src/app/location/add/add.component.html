@@ -1,0 +1,132 @@
+<h1>add works!</h1>
+
+<h2>Products</h2>
+
+<div
+  *ngFor="let product of productsService.product$ | async; index as productId"
+>
+  <h3>
+    <a
+      [title]="product.name + ' details'"
+       [routerLink]="['../product', product.id]" >
+      
+      PRODUCT NAME : {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.price">HARGA : {{ product.price }}</p>
+  <p *ngIf="product.description">DESCRIPTION : {{ product.description }}</p>
+  <p *ngIf="product.stock">STOCK : {{ product.stock }}</p>
+
+
+  <button (click)="share()">
+    Share
+  </button>
+
+  <app-alert [product]="product" (notify)="onNotify($event)"> </app-alert>
+
+  <div style="text-align:center">
+    <button (click)="openDialog(product)">Open Dialog</button>
+  </div>
+</div>
+
+
+<!-- <h2 mat-dialog-title>{{modalTitle}}</h2>
+          <mat-dialog-content>Do you wish to continue previous shopping?</mat-dialog-content>
+                <mat-dialog-actions>
+                      <button mat-button mat-dialog-close>No</button>
+      
+                      <button mat-button [mat-dialog-close]=”true”>Yes</button>
+                </mat-dialog-actions> -->
+
+<!-- <h3>
+          <a [title]="product.name">
+            {{ product.name }}
+          </a>
+        </h3>  -->
+
+<!-- </div> -->
+
+<!-- <h1 mat-dialog-title>INPUT PLEASe</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.price">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.stock">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.description">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div> -->
+
+<!-- <div class="form-group">
+        <div class="upload-image">
+          <div #image class="image-wrapper"></div>
+          <div class="browse-btn">
+            <input type="file" name="cameraImg" id="cameraImg" (change)="onSelectedFile($event)" />
+            <div class="browse-image">
+              <img src="assets/images/camera.png" width="60px" />
+              <p>Browse image</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+<!-- <div class="clearfix"></div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success">Save Product</button>
+      </div> -->
+
+<h2>Create Product</h2>
+<div class="row">
+  <div class="col-md-12">
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="name"
+          class="form-control"
+          placeholder="Product Name"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="price"
+          class="form-control"
+          placeholder="Price"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="number"
+          formControlName="stock"
+          class="form-control"
+          placeholder="Stock"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="description"
+          class="form-control"
+          placeholder="Description"
+        />
+      </div>
+      <button type = 'submit'>
+          Click
+      </button>
+      <!-- <div *ngIf="uploadError">
+        <div [innerHTML]="uploadError" class="error"></div>
+      </div> -->
+    </form>
+    <!-- <p>{{ error }}</p> -->
+  </div>
+</div>

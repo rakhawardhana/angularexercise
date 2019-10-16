@@ -1,0 +1,190 @@
+# this is an auto generated file. This will be overwritten
+query GetOrder($id: ID!) {
+  getOrder(id: $id) {
+    id
+    status
+    dateOrderPlaced
+    orderDetails
+    items {
+      items {
+        id
+        quantity
+        price
+        otherItemDetails
+        order {
+          id
+          status
+          dateOrderPlaced
+          orderDetails
+        }
+        product {
+          id
+          name
+          price
+          stock
+          size
+          description
+        }
+      }
+      nextToken
+    }
+  }
+}
+query ListOrders(
+  $filter: ModelOrderFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listOrders(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      status
+      dateOrderPlaced
+      orderDetails
+      items {
+        items {
+          id
+          quantity
+          price
+          otherItemDetails
+        }
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetOrderItem($id: ID!) {
+  getOrderItem(id: $id) {
+    id
+    quantity
+    price
+    otherItemDetails
+    order {
+      id
+      status
+      dateOrderPlaced
+      orderDetails
+      items {
+        items {
+          id
+          quantity
+          price
+          otherItemDetails
+        }
+        nextToken
+      }
+    }
+    product {
+      id
+      name
+      price
+      stock
+      size
+      description
+      orderItems {
+        items {
+          id
+          quantity
+          price
+          otherItemDetails
+        }
+        nextToken
+      }
+    }
+  }
+}
+query ListOrderItems(
+  $filter: ModelOrderItemFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listOrderItems(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      quantity
+      price
+      otherItemDetails
+      order {
+        id
+        status
+        dateOrderPlaced
+        orderDetails
+        items {
+          nextToken
+        }
+      }
+      product {
+        id
+        name
+        price
+        stock
+        size
+        description
+        orderItems {
+          nextToken
+        }
+      }
+    }
+    nextToken
+  }
+}
+query GetProduct($id: ID!) {
+  getProduct(id: $id) {
+    id
+    name
+    price
+    stock
+    size
+    description
+    orderItems {
+      items {
+        id
+        quantity
+        price
+        otherItemDetails
+        order {
+          id
+          status
+          dateOrderPlaced
+          orderDetails
+        }
+        product {
+          id
+          name
+          price
+          stock
+          size
+          description
+        }
+      }
+      nextToken
+    }
+  }
+}
+query ListProducts(
+  $filter: ModelProductFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listProducts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      price
+      stock
+      size
+      description
+      orderItems {
+        items {
+          id
+          quantity
+          price
+          otherItemDetails
+        }
+        nextToken
+      }
+    }
+    nextToken
+  }
+}

@@ -1,0 +1,25 @@
+<p>cart works!</p>
+
+
+<div
+  *ngFor="let order of allOrderItem"
+
+>
+  <h3>
+    <a>
+      Nama Product : {{ order.product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="order.quantity">quantity : {{ order.quantity }}</p>
+
+  <!-- <button (click)="share()">
+    Share
+  </button>
+
+  <app-alert [product]="product" (notify)="onNotify($event)"> </app-alert>
+
+  <div style="text-align:center">
+    <button (click)="openDialog(product)">Open Dialog</button>
+  </div> -->
+</div>

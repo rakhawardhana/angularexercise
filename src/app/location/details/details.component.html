@@ -1,0 +1,51 @@
+<h2>Product</h2>
+
+
+<div *ngIf = "product">
+  <h3>{{ product.name }}</h3>
+  <h4>{{ product.price }}</h4>
+  <p>{{ product.description }}</p>
+
+  
+  <button (click)="addToCart()">Add To Cart, Select The Quantity first!</button>
+  <!-- <button (click)="deleteCart(product)">Cancel Cart!</button> -->
+  
+
+  
+
+  <!-- <input type="number" /> -->
+  <input
+  type="number"
+  [formControl]="quantityFormControl"
+  class="form-control"
+  placeholder="quantity"
+  />
+
+
+  
+    <!-- <button (click)="increase()">Increase</button>
+    <button (click)="decrease()">Decrease</button>
+   -->
+   <div class="row">
+      <!-- <div class="col-sm-3">
+            <input type="text" readonly class="form-control col-8 text-center bg-white font-weight-bold " id="counterval" value="{{counter}}"
+         #Totalcartval>
+      </div> -->
+      <button 
+
+      [routerLink]="['../../cart']" >
+      LIST CART
+      </button>
+
+
+
+      <!-- <div class="col-sm-1"></div>
+        <a class="btn btn-primary text-white" (click)="decrement()" role="button">
+          <i class="fa fa-minus" style="font-size:15px"></i>
+        </a>
+      <div class="col-sm-1"></div>
+          <a class="btn btn-primary text-white" (click)="increment()" role="button">
+            <i class="fa fa-plus" style="font-size:15px"></i>
+          </a>
+      </div> -->
+  </div>

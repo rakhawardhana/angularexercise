@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "latihanangularjs-dev-20191007144729-authRole",
+            "UnauthRoleArn": "arn:aws:iam::306157415048:role/latihanangularjs-dev-20191007144729-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::306157415048:role/latihanangularjs-dev-20191007144729-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "latihanangularjs-dev-20191007144729-deployment",
+            "UnauthRoleName": "latihanangularjs-dev-20191007144729-unauthRole",
+            "StackName": "latihanangularjs-dev-20191007144729",
+            "StackId": "arn:aws:cloudformation:us-east-1:306157415048:stack/latihanangularjs-dev-20191007144729/b6ffbed0-e8d6-11e9-81cb-12926a34023c"
+        },
+        "categories": {
+            "auth": {
+                "latihanangularjsad7bb12d": {}
+            }
+        }
+    }
+}

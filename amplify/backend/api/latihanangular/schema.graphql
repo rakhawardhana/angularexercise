@@ -1,0 +1,35 @@
+
+type Order @model {
+  id: ID!
+  status: OrderStatus!
+  dateOrderPlaced: AWSDateTime!
+  orderDetails: String
+  items: [OrderItem] @connection(name: "OrderOrderItems")
+}
+
+type OrderItem @model {
+  id: ID!
+  quantity: Int!
+  price: Float!
+  otherItemDetails: String
+  order: Order @connection(name: "OrderOrderItems")
+  product: Product @connection(name: "OrderItemProduct")
+}
+
+type Product @model {
+  id: ID!
+  name: String
+  price: Float!
+  stock: Int!
+  size: String
+  description: String
+  orderItems: [OrderItem] @connection(name: "OrderItemProduct")
+}
+
+enum OrderStatus {
+  CANCELED
+  COMPLETED
+  ONHOLD
+  PROCESSING
+  PENDING_PAYMENT
+}
